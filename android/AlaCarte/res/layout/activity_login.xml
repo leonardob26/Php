@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp"
+        android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/edtUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/S_usuario" 
+        android:inputType="text">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="@string/s_pass"
+        android:inputType="textPassword"
+         />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/s_autenticarse" 
+        android:background="@drawable/for_boton"
+        android:drawableLeft="@drawable/ic_encrypt" />
+
+    <EditText
+        android:id="@+id/edtDomain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:inputType="text"
+        android:clickable="true"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:layout_gravity="right"
+        android:id="@+id/btnMostrarPref"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_config"
+        android:maxHeight="25dp"
+	    android:maxWidth="25dp"
+         />
+
+</LinearLayout>

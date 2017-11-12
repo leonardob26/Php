@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+     android:baselineAligned="false">
+
+    <LinearLayout
+        android:id="@+id/lltPlatos"
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" >
+        
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/s_buscarplatos"
+            android:inputType="textCapCharacters" />
+
+        <ListView
+         android:id="@+id/lstPlatos"
+         android:layout_width="250dp"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+    	 />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltIzqui"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <GridLayout android:id="@+id/grd1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4" >
+
+            <Button
+                android:id="@+id/btnAgregar"
+                android:layout_width="200dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/agregar_plato"
+                android:drawableLeft="@drawable/s_add24"
+                android:drawablePadding="5dp"
+                android:background="@drawable/for_boton1" />
+
+            <TextView
+                android:id="@+id/lblMesa"
+                android:layout_gravity="left"
+                android:layout_marginRight="15dp"
+                android:text="@string/s_mesan"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"             
+             />
+
+            <TextView
+                android:id="@+id/txvPersona"
+                android:layout_gravity="left"
+                android:layout_marginRight="15dp"
+                android:text="@string/lbPersona"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtCantPersonas"
+                android:layout_gravity="left"
+                android:ems="3"
+                android:inputType="number" >
+
+                <requestFocus />
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/lltAgregar"
+                android:layout_columnSpan="4"
+                android:layout_gravity="fill_horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/txvPlatoEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_lblPlato" 
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edtCantPlato"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="3"
+                    android:inputType="number" />
+
+            </LinearLayout>
+            <GridLayout android:layout_gravity="fill_horizontal|center" 
+                android:id="@+id/grdAction" 
+                android:layout_columnSpan="4" 
+                android:visibility="gone" >
+                
+             <Button android:id="@+id/btnGuardar"
+                 android:layout_gravity="left"
+			     android:text="@string/s_btnGuardar" 
+			     android:textSize="16sp" 
+			     android:drawableLeft="@drawable/s_down24"
+			     android:drawablePadding="5dp" 
+			     android:background="@drawable/for_boton1"
+			     android:layout_marginRight="5dp" />
+
+            <Button android:id="@+id/btnEliminar"
+                android:layout_gravity="left"
+				android:text="@string/s_btnEliminar" 
+				android:textSize="16sp" 
+				android:drawableLeft="@drawable/s_minus24"
+				android:drawablePadding="5dp" 
+				android:background="@drawable/for_boton1" 
+				android:layout_marginRight="5dp" />
+
+            <Button android:id="@+id/btnCancelar"
+                android:layout_gravity="left"
+				android:text="@string/s_btnCancelar"
+				android:textSize="16sp"
+				android:drawableLeft="@drawable/s_undo24"
+				android:drawablePadding="5dp" 
+				android:background="@drawable/for_boton1" />
+                
+            </GridLayout>
+
+        </GridLayout>
+
+        <ListView android:id="@+id/lstDetalles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+        <GridLayout android:id="@+id/grdFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:columnCount="4"
+            android:paddingTop="5dp"
+            >
+
+            <Button
+                android:id="@+id/btnEnviar"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_gravity="right"
+                android:drawableLeft="@drawable/ic_send"
+                android:drawablePadding="15dp"
+                android:textStyle="bold"
+                android:text="@string/s_enviar" 
+                android:background="@drawable/for_boton1"
+                android:layout_marginRight="10dp" />
+            <Button
+                android:id="@+id/btnServirTodos"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_gravity="right"
+                android:drawableLeft="@drawable/ic_ok_apply"
+                android:drawablePadding="15dp"
+                android:textStyle="bold"
+                android:text="@string/s_ServirTodos" 
+                android:background="@drawable/for_boton1" 
+                android:layout_marginRight="15dp"/>
+            <Button
+                android:id="@+id/btnPrint"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_gravity="right"
+                android:drawableLeft="@drawable/ic_print"
+                android:drawablePadding="15dp"
+                android:textStyle="bold"
+                android:background="@drawable/for_boton1" />
+            
+            <TextView
+                android:id="@+id/tvwTotal"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:text="@string/s_cero" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sinfoto" />
+
+        <TextView
+            android:id="@+id/txvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+    </LinearLayout>
+
+</LinearLayout>
